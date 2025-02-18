@@ -1,11 +1,12 @@
 /*
-  Spectacular Neon Geometric Pattern with Enhanced Music Sync
-  ------------------------------------------------------------
+  Spectacular Neon Geometric Pattern with Enhanced Music Sync and Toggle Indicator
+  -----------------------------------------------------------------------------------
   This script:
   - Draws a radial geometric pattern with neon lines.
   - Animates a moving light along each line, whose speed increases with music intensity.
   - Adds a "trail" effect behind the moving light and a pulsating ring that reacts to the music.
   - Uses the Web Audio API to sync visual effects with the music.
+  - Provides a toggle button that updates its text and style based on music sync state.
 */
 
 // Global variables and canvas setup
@@ -57,9 +58,13 @@ if (audioElement) {
   });
 }
 
-// Toggle music synchronization with button
-document.getElementById("toggleSync").addEventListener("click", () => {
+// Toggle music synchronization with button and update button text/style
+const toggleButton = document.getElementById("toggleSync");
+toggleButton.addEventListener("click", () => {
   syncEnabled = !syncEnabled;
+  toggleButton.textContent = syncEnabled ? "Music Sync ON" : "Music Sync OFF";
+  toggleButton.classList.toggle("sync-on", syncEnabled);
+  toggleButton.classList.toggle("sync-off", !syncEnabled);
 });
 
 // Animation loop
