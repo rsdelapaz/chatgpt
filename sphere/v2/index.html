@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Neon Holographic Sphere Animation V2.4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Space Background Canvas -->
+  <canvas id="space"></canvas>
+  <!-- Hologram Canvas for the Sphere -->
+  <canvas id="hologram"></canvas>
+
+  <!-- Toggle Buttons Container (always visible) -->
+  <div class="button-container">
+    <button id="toggleConfig" title="Toggle Config">
+      <!-- Gear Icon -->
+      <svg viewBox="0 0 24 24">
+        <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm7.94-3.5a7.962 7.962 0 0 0-.07-1l2.11-1.65a.5.5 0 0 0 .11-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1a8.137 8.137 0 0 0-1.72-1L14 2.81a.5.5 0 0 0-.5-.81h-4a.5.5 0 0 0-.5.41L8.45 5.13a8.137 8.137 0 0 0-1.72 1l-2.49-1a.5.5 0 0 0-.61.22l-2 3.46a.5.5 0 0 0 .11.64l2.11 1.65a7.962 7.962 0 0 0-.07 1l-2.11 1.65a.5.5 0 0 0-.11.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.5.38 1.04.7 1.72 1l.55 2.32a.5.5 0 0 0 .5.41h4a.5.5 0 0 0 .5-.41l.55-2.32c.68-.3 1.22-.63 1.72-1l2.49 1a.5.5 0 0 0 .61-.22l2-3.46a.5.5 0 0 0-.11-.64l-2.11-1.65z" fill="#fff"/>
+      </svg>
+    </button>
+    <button id="fullscreenToggle" title="Toggle Fullscreen">
+      <!-- Fullscreen Icon -->
+      <svg viewBox="0 0 24 24">
+        <path d="M7 14H5v5h5v-2H7v-3zm0-4h2V7h3V5H7v5zm10 9h-3v2h5v-5h-2v3zm-3-9h3V5h-5v2h3v3z" fill="#fff"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Configuration Panel -->
+  <div class="controls" id="controls">
+    <label for="neonColor">Neon Color:</label>
+    <select id="neonColor">
+      <option value="#00FFFF">Cyan</option>
+      <option value="#FF00FF">Magenta</option>
+      <option value="#39FF14">Neon Green</option>
+      <option value="#1E90FF">Dodger Blue</option>
+      <option value="cycle">Cycle Colors</option>
+    </select>
+    <label for="colorCycleSpeed">Color Cycle Speed:</label>
+    <input type="range" id="colorCycleSpeed" min="0.1" max="5" step="0.1" value="2" />
+    <label for="beamSpeed">Beam Speed:</label>
+    <input type="range" id="beamSpeed" min="1" max="10" value="5" />
+    <label for="trailLength">Trail Length (points):</label>
+    <input type="range" id="trailLength" min="150" max="500" value="325" />
+    <label for="rotationSpeed">Sphere Rotation Speed:</label>
+    <input type="range" id="rotationSpeed" min="0" max="5" value="1" step="0.1" />
+    <label for="starSpeed">Star/Comet Speed:</label>
+    <input type="range" id="starSpeed" min="1" max="20" value="10" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

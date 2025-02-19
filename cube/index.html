@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spectacular 3D Neon Cube Fluid Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Matrix-style background canvas -->
+  <canvas id="matrix"></canvas>
+
+  <!-- 3D Scene Container with Perspective -->
+  <div class="scene" id="scene">
+    <!-- The cube contains a neon liquid interior to illustrate fluid mechanics -->
+    <div class="cube" id="cube">
+      <div class="liquid" id="liquid"></div>
+      <!-- Cube Faces (all identical for a clear 3D effect) -->
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+  </div>
+
+  <!-- Minimalistic Control Panel (Top-Right Corner) -->
+  <div class="controls">
+    <label for="movementType">Movement Type:</label>
+    <select id="movementType">
+      <option value="linear">Linear</option>
+      <option value="circular">Circular</option>
+      <option value="random">Random</option>
+      <option value="rolling">Rolling</option>
+    </select>
+    <label for="speed">Speed:</label>
+    <input type="range" id="speed" min="1" max="10" value="5" />
+    <label for="neonColor">Neon Color:</label>
+    <select id="neonColor">
+      <option value="#00FFFF">Cyan</option>
+      <option value="#FF00FF">Magenta</option>
+      <option value="#39FF14">Neon Green</option>
+      <option value="#1E90FF">Dodger Blue</option>
+      <option value="cycle">Cycle Colors</option>
+    </select>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

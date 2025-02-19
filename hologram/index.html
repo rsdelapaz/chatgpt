@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Neon Hologram Cube Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Matrix-Style Background Canvas -->
+  <canvas id="matrix"></canvas>
+
+  <!-- 3D Scene Container with Perspective -->
+  <div class="scene" id="scene">
+    <!-- Holographic Cube: A wireframe cube with neon outlines -->
+    <div class="cube" id="cube">
+      <!-- Cube Faces (wireframe only) -->
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+  </div>
+
+  <!-- Minimalistic Control Panel (Top-Right Corner) -->
+  <div class="controls">
+    <label for="movementType">Movement Type:</label>
+    <select id="movementType">
+      <option value="linear">3D Linear</option>
+      <option value="circular">3D Circular</option>
+      <option value="random">3D Random</option>
+      <option value="rolling">Rolling (Cube rotates like a wheel)</option>
+    </select>
+    <label for="speed">Movement Speed:</label>
+    <input type="range" id="speed" min="1" max="10" value="5" />
+    <label for="neonColor">Hologram Line Color:</label>
+    <select id="neonColor">
+      <option value="#00FFFF">Cyan</option>
+      <option value="#FF00FF">Magenta</option>
+      <option value="#39FF14">Neon Green</option>
+      <option value="#1E90FF">Dodger Blue</option>
+      <option value="cycle">Cycle Colors</option>
+    </select>
+    <label for="matrixSpeed">Matrix Speed:</label>
+    <input type="range" id="matrixSpeed" min="1" max="20" value="10" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

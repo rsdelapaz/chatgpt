@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Neon Holographic Sphere Comet Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Space Background Canvas -->
+  <canvas id="space"></canvas>
+  <!-- Hologram Canvas for the Sphere -->
+  <canvas id="hologram"></canvas>
+
+  <!-- Toggle Button for Configuration Panel -->
+  <button id="toggleConfig">Hide Config</button>
+
+  <!-- Minimalistic Control Panel (Top-Right Corner) -->
+  <div class="controls" id="controls">
+    <label for="neonColor">Neon Color:</label>
+    <select id="neonColor">
+      <option value="#00FFFF">Cyan</option>
+      <option value="#FF00FF">Magenta</option>
+      <option value="#39FF14">Neon Green</option>
+      <option value="#1E90FF">Dodger Blue</option>
+      <option value="cycle">Cycle Colors</option>
+    </select>
+    <label for="colorCycleSpeed">Color Cycle Speed:</label>
+    <input type="range" id="colorCycleSpeed" min="0.1" max="5" step="0.1" value="2" />
+    <label for="beamSpeed">Beam Speed:</label>
+    <input type="range" id="beamSpeed" min="1" max="10" value="5" />
+    <label for="trailLength">Trail Length (points):</label>
+    <input type="range" id="trailLength" min="10" max="100" value="50" />
+    <label for="rotationSpeed">Sphere Rotation Speed:</label>
+    <input type="range" id="rotationSpeed" min="0" max="5" value="1" step="0.1" />
+    <label for="starSpeed">Star/Comet Speed:</label>
+    <input type="range" id="starSpeed" min="1" max="20" value="10" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
